@@ -18,7 +18,6 @@ export default function App({ Component, pageProps }) {
   const dragonCount = animals.find((animal) => animal.name === "Dragons").count;
 
   function handleAdd(animalId) {
-    console.log(animalId);
     setAnimals(
       animals.map((animal) =>
         animal.id === animalId ? { ...animal, count: animal.count + 1 } : animal
@@ -27,7 +26,6 @@ export default function App({ Component, pageProps }) {
   }
 
   function handleSubtract(animalId) {
-    console.log(animalId);
     setAnimals(
       animals.map((animal) =>
         animal.id === animalId
